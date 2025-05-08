@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <title>Cv Salma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tambahkan Alpine.js di head atau sebelum </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            background-color: #1f2937;
+            color: white;
+            padding: 20px;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #1f2937;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        .gray {
+            color: #4b5563;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0c25] text-white">
+    <!-- Header -->
+    <header class="sticky top-6 z-50 flex justify-center">
+        <div
+            class="w-[90%] max-w-6xl bg-[#0f172a] backdrop-blur-md shadow-lg rounded-full px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="images/insial.png" alt="Logo" class="w-10 h-10 rounded-full" />
+                <span class="text-xl font-bold" style="font-family: 'Cinzel', serif;">Salma</span>
+            </div>
+
+            <!-- _______________ -->
+
+            <nav class=" border-b border-gray-200 px-4 py-3" x-data="{ open: false }">
+                <div class="flex items-center justify-between max-w-screen-xl mx-auto">
+                    <!-- Logo -->
+                    <!-- <a href="#" class="text-xl font-bold">MySite</a> -->
+
+                    <!-- Hamburger (Mobile) -->
+                    <button @click="open = !open"
+                        class="sm:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <!-- Menu (Dekstop) -->
+                    <div class="hidden sm:flex space-x-6">
+                        <a href="index.html" class="block text-gray-700 hover:text-blue-500">Portofolio</a>
+
+                        <a href="project.html" class="block text-gray-700 hover:text-blue-500">Project</a>
+
+                    </div>
+                </div>
+
+                <!-- Dropdown Menu (Mobile) -->
+                <div x-show="open" class="sm:hidden px-4 pt-2 pb-4 space-y-2" x-transition>
+                    <a href="index.html" class="block text-gray-700 hover:text-blue-500">Portofolio</a>
+
+                    <a href="project.html" class="block text-gray-700 hover:text-blue-500">Project</a>
+
+                </div>
+            </nav>
+
+            <!-- <nav class="flex space-x-6 text-sm font-medium text-white">
+                <a href="index.html" class="hover:text-blue-300">Portfolio</a>
+                <a href="project.html" class="hover:text-blue-300">Project</a>
+            </nav> -->
+
+            <div class="relative group">
+                <button
+                    class="ml-4 bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition flex items-center space-x-2">
+                    <span>Let’s Talk</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </button>
+
+                <div
+                    class="absolute z-50 hidden group-hover:flex flex-col mt-2 right-0 bg-white text-gray-800 rounded-xl shadow-lg min-w-[180px] animate-fadeIn">
+                    <a href="https://wa.me/6285947177191" target="_blank"
+                        class="flex items-center px-4 py-3 hover:bg-blue-100 transition-colors rounded-t-xl">
+                        <img src="https://img.icons8.com/ios-filled/20/26e07f/whatsapp.png" alt="WhatsApp"
+                            class="mr-2" />
+                        WhatsApp
+                    </a>
+                    <a href="mailto:salma.hanifah113@gmail.com"
+                        class="flex items-center px-4 py-3 hover:bg-blue-100 transition-colors rounded-b-xl">
+                        <img src="https://img.icons8.com/ios-filled/20/1e40af/new-post.png" alt="Email" class="mr-2" />
+                        Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ 
+
+    <!-- Resume Section -->
+    <section class="bg-[#0b0f1a] text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-semibold mb-10 text-center text-white">
+                My <span class="text-blue-400">Curriculum Vitae</span>
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Sidebar -->
+                <div class="sidebar w-full md:w-1/3 rounded-xl">
+                    <h1>SALMA HANIFAH</h1>
+                    <p class="gray">PROGRAMMER MAJOR</p>
+
+                    <div class="section contact">
+                        <h2>CONTACT</h2>
+                        <p>📞 +62 859-4717-7191</p>
+                        <p>✉️ salma.hanifah113@gmail.com</p>
+                        <p>📍 Cakung, East Jakarta</p>
+                        <a href="https://www.linkedin.com/in/salma-hanifah-081586316" target="_blank">LinkedIn</a>
+                    </div>
+
+                    <div class="section">
+                        <h2>EDUCATION</h2>
+                        <p><strong>Politeknik IDN</strong><br>Programmer Major (2024– )</p>
+                        <p><strong>Ponpes SMAIT Ad Da'wah</strong><br>IPA (2018–2022)</p>
+                        <p><strong>Ponpes SMPIT Ad Da'wah</strong><br>IPA (2015–2018)</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>SKILLS</h2>
+                        <ul>
+                            <li>HTML, CSS, JS</li>
+                            <li>Microsoft Office & Google Workspace</li>
+                            <li>Public Speaking & Komunikasi</li>
+                            <li>Leadership & Teamwork</li>
+                            <li>Problem Solving & Critical Thinking</li>
+                            <li>Time Management & Discipline</li>
+                            <li>Pengelolaan materi pembelajaran</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="main w-full md:w-2/3 bg-white text-black rounded-xl">
+                    <div class="section">
+                        <h2>PROFILE</h2>
+                        <p>SMAIT Ad Da’wah boarding school graduate. Currently an active student at IDN Polytechnic
+                            majoring in programming. Proficient in working individually or in team collaboration, and
+                            actively seeking experience. Dedicated to developing programmer experience and have an
+                            interest in a career as a programmer.</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>WORK EXPERIENCE</h2>
+                        <p><strong>1. Islamic Boarding School (2022–2023)</strong><br>
+                            Dormitory supervisor & substitute teacher:</p>
+                        <ul>
+                            <li>Mentoring and caring for students in the dorm</li>
+                            <li>Evaluating student development</li>
+                            <li>Organizing boarding activities</li>
+                            <li>Replacing teachers and delivering assignments</li>
+                            <li>Correcting Qur’an memorization</li>
+                        </ul>
+                        <p><strong>2. Independent Projects (2024–2025)</strong><br>
+                            Programming projects including:</p>
+                        <ul>
+                            <li>Landing pages, websites, backend</li>
+                            <li>Online/offline training classes</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2>ORGANIZATIONAL EXPERIENCE</h2>
+                        <ul>
+                            <li><strong>Student Council</strong> (2020–2021) – osis discipline, security and order
+                                section</li>
+                            <li><strong>Sanlat Committee</strong> (6–8 April 2023) – Supervisor & structure planning
+                            </li>
+                            <li><strong>National Seminar Committee</strong> (11 Nov 2023) – Consumption, equipment &
+                                logistics, MC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

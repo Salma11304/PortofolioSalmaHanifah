@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salma Hanifah</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+     <!-- Tambahkan Alpine.js di head atau sebelum </body> -->
+     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(0.5rem);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f0c25] text-white">
+    <!-- Navbar -->
+    <header class="sticky top-6 z-50 flex justify-center">
+        <div
+            class="w-[90%] max-w-6xl bg-[#0f172a] backdrop-blur-md shadow-lg rounded-full px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="images/insial.png" alt="Logo" class="w-10 h-10 rounded-full" />
+                <span class="text-xl font-bold" style="font-family: 'Cinzel', serif;">Salma</span>
+            </div>
+
+           <!-- _______________ -->
+
+            <nav class=" border-b border-gray-200 px-4 py-3" x-data="{ open: false }">
+                <div class="flex items-center justify-between max-w-screen-xl mx-auto">
+                    <!-- Logo -->
+                    <!-- <a href="#" class="text-xl font-bold">MySite</a> -->
+
+                    <!-- Hamburger (Mobile) -->
+                    <button @click="open = !open"
+                        class="sm:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <!-- Menu (Dekstop) -->
+                    <div class="hidden sm:flex space-x-6">
+                        <a href="#about" class="text-blue-300">About</a>
+                        <a href="Cv.html" class="hover:text-blue-300">My Cv</a>
+                        <a href="#project" class="hover:text-blue-300">Project</a>
+                        <a href="#contact" class="hover:text-blue-300">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Menu (Mobile) -->
+                <div x-show="open" class="sm:hidden px-4 pt-2 pb-4 space-y-2" x-transition>
+                    <a href="#about" class="block text-gray-700 hover:text-blue-500">About</a>
+                    <a href="Cv.html" class="block text-gray-700 hover:text-blue-500">My Cv</a>
+                    <a href="#project" class="block text-gray-700 hover:text-blue-500">Project</a>
+                    <a href="#contact" class="block text-gray-700 hover:text-blue-500">Contact</a>
+                    
+                </div>
+            </nav>
+
+
+            <!-- <nav class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#about" class="text-blue-300">About</a>
+        <a href="#project" class="hover:text-blue-300">Project</a>
+        <a href="#contact" class="hover:text-blue-300">Contact</a>
+      </nav> -->
+
+            <div class="relative group">
+                <button
+                    class="ml-4 bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition flex items-center space-x-2">
+                    <span>Let’s Talk</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </button>
+
+                <div
+                    class="absolute z-50 hidden group-hover:flex flex-col mt-2 right-0 bg-white text-gray-800 rounded-xl shadow-lg min-w-[180px] animate-fadeIn">
+                    <a href="https://wa.me/6285947177191" target="_blank"
+                        class="flex items-center px-4 py-3 hover:bg-blue-100 transition-colors rounded-t-xl">
+                        <img src="https://img.icons8.com/ios-filled/20/26e07f/whatsapp.png" alt="WhatsApp"
+                            class="mr-2" />
+                        WhatsApp
+                    </a>
+                    <a href="mailto:salma.hanifah113@gmail.com"
+                        class="flex items-center px-4 py-3 hover:bg-blue-100 transition-colors rounded-b-xl">
+                        <img src="https://img.icons8.com/ios-filled/20/1e40af/new-post.png" alt="Email" class="mr-2" />
+                        Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <section class="py-16 bg-cover bg-center mt-6" style="background-image: url('/images/header.jpeg');">
+        <div class="container mx-auto text-center mt-10 px-4">
+            <h1 class="text-4xl font-bold mb-2 text-blue-900">About Me</h1>
+            <p class="text-sm text-black">Home > <span class="text-[#0f172a]">About Me</span></p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative flex justify-center">
+                <div class="text-center">
+                    <button class="px-4 py-1 border border-blue-400 rounded-full mb-4 text-blue-400">About
+                        Me</button><br>
+                    <div
+                        class="w-72 h-72 sm:w-96 sm:h-96 rounded-full border-[6px] border-blue-400 overflow-hidden z-10 mx-auto">
+                        <img src="images/salma.jpeg" alt="Profile" class="w-full h-full object-cover" />
+                    </div>
+                    <div
+                        class="absolute top-0 left-0 w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-full -translate-x-4 -translate-y-4">
+                    </div>
+                    <div
+                        class="absolute bottom-0 right-0 w-12 h-12 sm:w-16 sm:h-16 bg-blue-300 rounded-full translate-x-4 translate-y-4">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">Hello...</h2>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">It's Me, <span class="text-blue-500">Salma
+                        Hanifah</span></h3>
+                <p class="text-gray-300 mb-6 text-justify">
+                    Saya adalah seorang mahasiswa semester 2 jurusan Pemrograman yang memiliki ketertarikan besar dalam
+                    dunia teknologi dan pengembangan web. Saya senang belajar hal-hal baru, mengeksplorasi solusi
+                    kreatif, dan membangun project digital yang bermanfaat.
+
+                    Selain aktif belajar di kampus, saya juga memiliki pengalaman mengajar baik materi umum maupun
+                    dasar-dasar pemrograman kepada teman sebaya maupun peserta pemula. Beberapa project web sederhana
+                    yang saya kembangkan telah membantu saya memahami bagaimana sebuah sistem bekerja dari sisi frontend
+                    hingga backend.
+
+                    Saya percaya bahwa proses belajar tidak berhenti di ruang kelas saja, dan saya selalu terbuka untuk
+                    tantangan baru, kolaborasi proyek, maupun kesempatan pengembangan diri di bidang teknologi.
+                </p>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl mb-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-gray-400">Name:</p>
+                            <p class="text-white font-medium">Salma Hanifah</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">Phone:</p>
+                            <p class="text-white font-medium">+62 859-4717-7191</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">Email:</p>
+                            <p class="text-white font-medium">salma.hanifah113@gmail.com</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">LinkedIn:</p>
+                            <p class="text-white font-medium break-words">
+                                https://www.linkedin.com/in/salma-hanifah-081586316</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/6285947177191"
+                        class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Contact me
+                        →</a>
+                    <a href="Cv.html"
+                        class="border border-blue-400 text-blue-400 px-6 py-2 rounded-full hover:bg-blue-500 hover:text-white transition">My
+                        Cv ⬇</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-cover bg-center" style="background-image: url('images/download.jpeg');">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-blue-900 mb-16">PENDIDIKAN</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/90 p-8 rounded-2xl shadow-xl hover:scale-110 transition-transform">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Politeknik IDN Bogor</h3>
+                    <p class="text-gray-700 font-semibold">D3 - Teknologi Rekayasa Perangkat Lunak</p>
+                    <p class="text-gray-600">2024 - sekarang</p>
+                </div>
+                <div class="bg-white/90 p-8 rounded-2xl shadow-xl hover:scale-110 transition-transform">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Ponpes SMAIT Da'wah Mubarokah</h3>
+                    <p class="text-gray-700 font-semibold">Jurusan IPA</p>
+                    <p class="text-gray-600">2018 - 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 px-4 text-center">
+        <h2 class="text-3xl font-bold mb-10">My Work <span class="text-blue-400">Skills</span></h2>
+        <div class="flex justify-center">
+            <img src="images/skill.png" alt="Skill" class="w-full max-w-md object-contain rounded-xl shadow-lg" />
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="project" class="bg-[#0b0f1a] text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">My <span class="text-blue-400">Projects</span></h2>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-12">Beberapa Project yang telah Saya Kerjakan</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-[#131829] rounded-xl overflow-hidden">
+                    <img src="images/osis.png" alt="Web Osis" class="w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Web Osis</h3>
+                    </div>
+                </div>
+                <div class="bg-[#131829] rounded-xl overflow-hidden">
+                    <img src="images/Lumemind.png" alt="Apk Lumemind" class="w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Aplikasi Kesehatan Mental</h3>
+                    </div>
+                </div>
+                <div class="bg-[#131829] rounded-xl overflow-hidden">
+                    <img src="images/porto.png" alt="Web Portofolio" class="w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Web Portofolio</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10">
+                <a href="project.html">
+                    <button
+                        class="bg-blue-500 text-white font-medium py-2 px-6 rounded-full hover:bg-orange-500 transition">
+                        See All →
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b0c2a] text-gray-300 py-12 px-6">
+        <div class="container mx-auto grid md:grid-cols-4 gap-8 text-sm">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="images/insial.png" alt="Logo" class="h-10 w-10 object-contain rounded-full" />
+                    <span class="text-xl font-semibold text-white" style="font-family: 'Cinzel', serif;">Salma</span>
+                </div>
+                <p>Mari Bekerja Sama, Segera Hubungi Saya</p>
+            </div>
+            <div>
+                <h3 class="text-white font-semibold mb-4">Navigation</h3>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="text-blue-300">About</a></li>
+                    <li><a href="#project" class="hover:text-blue-300">Project</a></li>
+                    <li><a href="Cv.html" class="hover:text-blue-300">My Cv</a></li>
+                    <li><a href="https://wa.me/6285947177191" class="hover:text-blue-300">Contact</a></li>
+                </ul>
+            </div>
+            <div id="contact">
+                <h3 class="text-white font-semibold mb-4">Contact</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center"><span class="text-orange-500 mr-2">📞</span> (+62) 859-4717-7191</li>
+                    <li class="flex items-center"><span class="text-orange-500 mr-2">📧</span>
+                        salma.hanifah113@gmail.com</li>
+                    <li class="flex items-center"><span class="text-orange-500 mr-2">📍</span> Jl. Sangkuriang, Cakung,
+                        Jakarta Timur</li>
+                    <li class="flex items-center"><span class="text-orange-500 mr-2">🌐</span>
+                        https://www.linkedin.com/in/salma-hanifah-081586316</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-6 text-center text-xs text-gray-400">
+            <p>Copyright © 2025 by Salma. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

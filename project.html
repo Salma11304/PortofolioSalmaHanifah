@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <title>Project Salma</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(0.5rem);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0f0c25] text-white">
+
+  <!-- Header -->
+  <header class="py-10 bg-cover bg-center" style="background-image: url('/images/header.jpeg');">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="bg-blue-900 px-6 py-4 rounded-full shadow-lg flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+
+        <!-- Logo dan Nama -->
+        <div class="flex items-center space-x-3">
+          <img src="images/insial.png" alt="Logo" class="w-10 h-10 rounded-full" />
+          <span class="text-xl font-bold" style="font-family: 'Cinzel', serif;">Salma</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex space-x-6 text-sm font-medium">
+          <a href="index.html" class="hover:text-blue-300">Portfolio</a>
+          <a href="Cv.html" class="hover:text-blue-300">My Cv</a>
+        </nav>
+
+        <!-- Call to Action -->
+        <div class="relative group">
+          <button
+            class="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition flex items-center space-x-2">
+            <span>Let’s Talk</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div
+            class="absolute z-50 hidden group-hover:flex flex-col mt-2 right-0 bg-white text-gray-800 rounded-xl shadow-lg min-w-[180px] animate-fadeIn">
+            <a href="https://wa.me/6285947177191" target="_blank"
+              class="flex items-center px-4 py-3 hover:bg-blue-100 transition-colors rounded-t-xl">
+              <img src="https://img.icons8.com/ios-filled/20/26e07f/whatsapp.png" alt="WhatsApp" class="mr-2" />
+              WhatsApp
+            </a>
+            <a href="mailto:salma.hanifah113@gmail.com"
+              class="flex items-center px-4 py-3 hover:bg-blue-100 transition-colors rounded-b-xl">
+              <img src="https://img.icons8.com/ios-filled/20/1e40af/new-post.png" alt="Email" class="mr-2" />
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="project" class="bg-[#0b0f1a] py-16 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">My <span class="text-blue-400">Projects</span></h2>
+      <p class="text-gray-300 max-w-2xl mx-auto mb-12 text-sm md:text-base">Beberapa Project yang telah Saya Kerjakan</p>
+
+      <!-- Project Cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div class="bg-[#131829] rounded-xl overflow-hidden">
+          <img src="images/osis.png" alt="Web Osis" class="w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Web Osis</h3>
+          </div>
+        </div>
+
+        <div class="bg-[#131829] rounded-xl overflow-hidden">
+          <img src="images/Lumemind.png" alt="Apk Lumemind" class="w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Aplikasi Kesehatan Mental</h3>
+          </div>
+        </div>
+
+        <div class="bg-[#131829] rounded-xl overflow-hidden">
+          <img src="images/porto.png" alt="Web Portofolio" class="w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Web Portofolio</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Projects -->
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Beberapa <span class="text-blue-400">Project Lainnya</span></h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Each Card -->
+        <div class="bg-[#1e3a8a] p-6 rounded-xl shadow-lg text-left">
+          <h3 class="text-lg font-semibold mb-3">Web Presensi Karyawan</h3>
+          <p class="text-sm">Membangun sistem presensi dengan absensi digital, jadwal shift, dan dashboard menggunakan <strong>Laravel</strong>.</p>
+        </div>
+
+        <div class="bg-[#1e3a8a] p-6 rounded-xl shadow-lg text-left">
+          <h3 class="text-lg font-semibold mb-3">Kelas Pelatihan Online/Offline</h3>
+          <p class="text-sm">Menyelenggarakan kelas pemrograman dasar seperti <strong>HTML, CSS, dll</strong>.</p>
+        </div>
+
+        <div class="bg-[#1e3a8a] p-6 rounded-xl shadow-lg text-left">
+          <h3 class="text-lg font-semibold mb-3">Web Pengaduan Masyarakat</h3>
+          <p class="text-sm">Platform laporan publik dengan input, tracking, dan dashboard admin. Dibangun pakai <strong>Laravel</strong>.</p>
+        </div>
+
+        <div class="bg-[#1e3a8a] p-6 rounded-xl shadow-lg text-left">
+          <h3 class="text-lg font-semibold mb-3">Aplikasi Ticketing</h3>
+          <p class="text-sm">Aplikasi tiket berbasis <strong>Flutter</strong> dengan fitur e-ticket dan histori pemesanan.</p>
+        </div>
+
+        <div class="bg-[#1e3a8a] p-6 rounded-xl shadow-lg text-left">
+          <h3 class="text-lg font-semibold mb-3">Janji Temu Dokter</h3>
+          <p class="text-sm">Aplikasi reservasi dokter menggunakan <strong>Flutter</strong>, lengkap dengan jadwal dan filter pencarian.</p>
+        </div>
+
+        <div class="bg-[#1e3a8a] p-6 rounded-xl shadow-lg text-left">
+          <h3 class="text-lg font-semibold mb-3">Toko Makanan</h3>
+          <p class="text-sm">Aplikasi toko makanan dengan <strong>Flutter</strong>, katalog produk, keranjang, dan checkout online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
